@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+
+        }
+
+        .header h1 {
+            font-size: 4.5rem;
+            color: #AC3520;
+        }
+
+        .pheader {
+            font-size: 1.5rem;
+            color: #42464b;
+        }
+
+        .pheader2 {
+            font-size: 1.2rem;
+            text-align: right;
+            margin-left: auto;
+            color: #AC3520;
+            display: inline-block;
+        }
+
+
+        /* สไตล์ Navigation Bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* สไตล์ลิงค์ใน Navigation Bar */
+        .navbar a {
+            position: relative;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+
+        /* เมื่อวางเมาส์บนเมนู */
+        .navbar a:hover {
+            color: #AC3520;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        /* คอนเทนเนอร์สำหรับเมนูย่อย */
+        .submenu-container {
+            position: relative;
+        }
+
+        /* แถบเมนูเพิ่มเติม */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            background-color: #444;
+            padding: 0;
+            z-index: 1;
+            width: auto;
+            border-radius: 10px;
+            /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+        }
+
+        .submenu a {
+            padding: 14px 20px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        .submenu a:hover {
+            color: #AC3520;
+        }
+
+        /* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+        .submenu-container:hover .submenu {
+            display: flex;
+        }
+
+        /* จัดการเลย์เอาต์หลัก */
+        .container {
+            display: flex;
+            gap: 10px;
+            /* ระยะห่างระหว่างคอลัมน์ */
+        }
+
+        /* คอลัมน์ซ้าย */
+        .main-content {
+            flex: 3;
+            padding: 20px;
+        }
+
+        /* Sidebar หลัก */
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-right: 20px;
+            /* จัดเรียง Sidebar ย่อยในแนวตั้ง */
+            gap: 20px;
+            /* ช่องว่างระหว่าง Sidebar ย่อย */
+            max-height: max-content;
+        }
+
+        /* Sidebar ย่อย */
+        .sidebar-1 {
+            background-color: #ffffff;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            max-height: max-content;
+            margin-top: 30px;
+
+            .psb1 {
+                color: #AC3520;
+                text-align: center;
+                line-height: 1.5;
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            img {
+                border-radius: 15px;
+            }
+
+            .ulsb2 {
+                text-align: center;
+            }
+
+            .lisb2 {
+                margin-top: 10px;
+            }
+
+            .lisb21 {
+                line-height: 1.5;
+                color: #AC3520;
+            }
+
+        }
+
+        .sidebar-2 {
+            background-color: #ffffff;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            max-height: max-content;
+
+            .lisb2 {
+                margin-top: 10px;
+            }
+
+            .ulsb2 {
+                text-align: center;
+            }
+
+            .lisb21 {
+                line-height: 1.5;
+                color: #AC3520;
+            }
+
+            .psb1 {
+                color: #AC3520;
+                text-align: center;
+                line-height: 1.5;
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            img {
+                border-radius: 15px;
+            }
+
+        }
+
+        .main-content {
+            flex: 3;
+            display: grid;
+            gap: 20px;
+
+
+        }
+
+        /* กล่องสำหรับ Title */
+        .title-box1 {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            margin: 0 auto;
+            max-height: max-content;
+            margin-top: 30px;
+
+
+            .ptb1 {
+                font-size: 1.2rem;
+                color: #AC3520;
+                line-height: 1.6;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .title-box2 {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            max-height: fit-content;
+            
+
+            .ptb2 {
+                font-size: 1.2rem;
+                color: #AC3520;
+                line-height: 1.5;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .pheader {
+                font-size: 1rem;
+            }
+
+            .pheader2 {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .pheader {
+                font-size: 0.9rem;
+                
+            }
+
+            .pheader2 {
+                font-size: 0.8rem;
+                display: inline-block;
+            }
+
+            .sidebar,
+            .main-content {
+                padding: 10px;
+                
+            }
+
+            .title-box1 h2,
+            .title-box2 h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>PORTFOLIO</h1>
+        <p class="pheader">คณะวิทยาศาสตร์ประยุกต์ สาขา วิทยาการคอมพิวเตอร์ </p>
+        <p class="pheader2">{"นายสุทธวีร์ ฉันท์ประมุขกุล"}</p>
+    </div>
+    <div class="navbar">
+        <a href="/index.html">หน้าเเรก</a>
+        <div class="submenu-container">
+            <a href="#">กิจกรรมที่เข้าร่วม</a>
+            <div class="submenu">
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม(1)</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม(2)</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม(3)</a>
+            </div>
+        </div>
+        <div class="submenu-container">
+            <a href="#">ผลงาน</a>
+            <div class="submenu">
+                <a href="/ผลงาน/ผลงาน.html">ผลงาน</a>
+            </div>
+        </div>
+
+        <a href="#contact">ช่องทางการติดต่อ</a>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <!-- กล่องสำหรับแต่ละ Title -->
+            <div class="title-box1">
+                <h2>สุทธวีร์ ฉันท์ประมุขกุล</h2>
+                <h4>Sutthawee Chanparmookkun</h4>
+                <p class="ptb1">สวัสดีครับ ท่านคณะกรรมการทุกๆท่านนะครับตามหัวข้อเลยครับ ผมชื่อ นาย สุทธวีร์
+                    ฉันท์ประมุขกุล อันดับเเรกผมขอบคุณคณะกรรมการทุกๆท่าน ที่ได้เลือก
+                    พอร์ตเเละได้เข้ามาอ่านเว็บไซต์ที่ผมได้จัดทำขึ้นในครั้งนี้เพื่อเป็นการนำสิ่งที่ได้เรียนรู้เเละค้นคว้าเรื่อว
+                    การทำเว็บไซต์ด้วย HTML เเละ CSS ครับ โดยตัวเว็บHTML นี้ก็จะมีทั้งหมด 6 หน้าด้วยกันนะครับ
+                    โดยผมจะเริ่มจากหน้านี้ก่อนเลย คือหน้า HOME นั้นเองนะครับ
+                    โดยในสวนนี้ก็จะมีทั้งข้อมูลว่าทำไมผมถึงได้เริ่มทำเว็บไซต์นี้ทำไมตัวผมเองนั้นถึงได้อยากศึกษาในสายทางนี้นั้นเองครับ
+                    โดยเว็บไซต์นี้ผมได้ จัดทำเเละดำเนินการบน Visual Studio Code ครับ
+                    ส่วนสิ่งที่ทำที่เป็นเว็บไซต์ได้เเบบเรียลทามนั้น ผมได้ใช้ จะเป็น Extensions บน Visual Studio Code คือ
+                    Live Server ครับเป็นตัวช่วยผมได้เห็นเว็บไซต์ที่ผมทำได้เป็นอย่างดีเลยละครับ
+                    เเล้วเว็บไซต์นี้เหมือนเป็นการนำ PORTFOLIO ของผมมาใส่ไว้ในเว็บไซต์นี้เว็บเดียวเลยครับ
+                    เเละต่อจากนี้ผมอยากให้คณะกรรมการได้ลองใช้หรือทดสอบเว็บไซต์ที่ผมได้ทำขึ้นในครั้งนี้นะครับ
+                    ซึ่งผมอยากต่อยอดเว็บไซต์ที่ผมทำนั้นให่มีเรื่องการทำ Data Base ในการเก็บของมูลต่างๆ
+                    หรือไม่ว่าจะะเป็นทั้งเรื่องการทำ UX/UI
+                    เพื่อทำให้หน้าตาของเว็บไซต์ใช้งานได้ง่ายเเละเป็นมิตรเเก่ผู้ใช้ทุกๆๆคนที่ได้เ้ามาใช้บริการเว็บไซต์ที่ผมต้องการที่จะทำนั้นเองครับ
+                    หรือการนำความรู้ที่ได้จากการเรียน มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ คณะวิทยาศาสตร์ประยุกต์
+                    สาขาวิทยาการคอมพิวเตอร์
+                    เพื่อที่จะนำมาต่อยอดสิ่งใหม่ๆเเละสร้างสิ่งประดิษฐิ์ที่มีคุณภาพให้ผู้คนหรือประชาชนทุกคนได้ใช้งานอย่างมีประสิทธิภาพที่สุดครับ
+                    เเละคติประจำตัวของผม ความหมายของมันรงตัวมากๆครับ เมื่อเราพลาดทำสิ่งที่ผิดล้มขึ้นมา
+                    เราควรรีบลุกรีบปรับปรุงเเละเเก้ไขข้อผิดพลาดของตัวเองให้เร็วที่สุดเเล้วเมื่อเราทำทุกอย่างเเล้วผลมันก็จะออกมาดีเเน่นอนครับ
+                </p>
+            </div>
+
+            <div class="title-box2">
+                <h2>เหตุผลที่ผมถึงอยากเข้า คณะวิทยาศาสตร์ประยุกต์ สาขาวิทยาการคอมพิวเตอร์
+                    ของมหาวิทยาลัยพระจอมเกล้าพระนครเหนือ </h2>
+                <h4>The Reason Why I Want to Join Faculty of Applied Science Science Program in Computer Science(CS) of
+                    King Mongkut's University of Technology North Bongkok </h4>
+                <p class="ptb2">เหตุผลที่ผมอยากเข้า คณะวิทยาศาสตร์ประยุกต์ สาขาวิทยาการคอมพิวเตอร์ นั้น
+                    เมื่อผมยังอยู่มัธยมต้นช่วง
+                    ที่มีการเเพร่ระบาดของโควิด-19
+                    นั้นทำให้ผมได้เรียนออนไลน์ซึ่งการเรียนออนไลน์ในครั้งนี้เป็นการเปิดประสบการณ์ทางด้านคอมพิวเตอร์ของผมเลยก็ว่าได้ครับเพราะผมได้คอมพิวเตอร์เป็นของตัวเองครั้งเเรกจึงทำให้ผมได้เรียนรูการใช้คอมพิวเตอร์ของผม
+                    ซึ่งด้วยในช่วงนั้นผมจึงมีเวลาอยู่กับหน้าจอคอมพิวเตอร์มากขึ้นได้ลองได้เรียนรู้การใช้คอมพิวเตอร์มากขึ้นจึงทำให้ผมสนใจเกี่ยวกับคอมพิวเตอร์
+                    เเล้วเมื่อผมได้เรียนมาถึงมัธยมปลายผมได้ย้ายโรงเรียนผมจึงได้เรียนรู้ความรู็พื้นฐานไม่ว่าจะเกี่ยวกับ
+                    ทั้งท้านด้าน ซอฟต์เเวร์ เเละ ท้านด้าน ฮาร์ดเเวร์ ไม่ว่าจะเป็นการได้รู้พื้นฐานการทำเว็บเเอปพลิเคชัน
+                    บน เว็บไซต์
+                    ซึ่งผมอยากต่อยอดความรู้ในสิ่งที่ผมได้เรียนรู้นี้ไปให้ดีที่สุดประสบความสำเร็จมากที่สุดเเละผมเหตุผลที่ผมอยากเข้า
+                    คณะวิทยาศาสตร์ประยุกต์ สาขาวิทยาการคอมพิวเตอร์
+                    ของมหาวิทยาลัยพระจอมเกล้าพระนครเหนือ เพราะ มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ
+                    นั้นมีอุปกรณ์ที่เพรียบพร้อมทั้งบุคลากรที่สอนนักศึกษา
+                    เรื่องเนื้อหาหลักศูตรการศึกษาที่ตอบโจทย์ผมเป็นอย่างมากครับไม่ว่าจะเป็นการสอนเรื่อง
+                    วิศวกรรมซอฟต์เเวร์ ระบบอัจฉริยะ ที่อยู่ตามมือถือสมัยนี้ต่างๆ
+                    ซึ่งเป็นสิ่งที่ผมสนใจเเละอยากเข้ามาศึกษาที่ มหาวิทยาลัยพระจอมเกล้าพระนครเหนือ
+                    เเละด้วยทั้งสถานที่การศึกษาที่เพรียบพร้อมเต็มไปด้วยสิ่งอำนวยความสะดวกต่างๆๆให้เเก่นักศึกษา
+                    เเละนี้คือเหตุผลที่ผมอยากเข้า คณะวิทยาศาสตร์ประยุกต์ สาขาวิทยาการคอมพิวเตอร์
+                    ของมหาวิทยาลัยพระจอมเกล้าพระนครเหนือ นั้นเองครับ ขอบคุณครับ.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-1">
+                <h2>About Me</h2>
+                <center><img src="/ที่่เก็บรูป/img (2).jpg" alt="" width="50%">
+                </center>
+                <h3>
+                    คติประจำตัว
+                </h3>
+                <p class="psb1">
+                    เมื่อเราล้มจงลุกขึ้นให้เร็ว
+                    แล้วปรับปรุงตัวเองเพื่อพัฒนาต่อไปเเล้วจึงนำสิ่งที่ผิดพลายไปปรับปรุงให้ดีขึ้นเเล้วผลรับจะออกมาดีเเน่นอน
+
+                </p>
+            </div>
+            <div class="sidebar-2">
+                <h2>ทักษะด้านคอมพิวเตอร์</h2>
+
+                <ul class="ulsb2">
+                    <li class="lisb2"><img src="/ที่่เก็บรูป/html.png" alt="" width="20%"></li>
+                    <li class="lisb2"><img src="/ที่่เก็บรูป/CSS.png" alt="" width="13.5%"></li>
+                    <li class="lisb2"><img src="/ที่่เก็บรูป/AR.png" alt="" width="30%"></li>
+                    <li class="lisb2"><img src="/ที่่เก็บรูป/Py.png" alt="" width="20%"></li>
+                    <li class="lisb2"><img src="/ที่่เก็บรูป/SKU.png" alt="" width="30%"></li>
+                </ul>
+                <h2>ความสามารถ</h2>
+                <ul>
+                    <li class="lisb21">ความรู็พื้นฐานด้านคอมพิวเตอร์</li>
+                    <li class="lisb21">การพัฒนาเว็บไซต์</li>
+                    <li class="lisb21">ความรู้พื้นฐานด้าน IOT</li>
+                    <li class="lisb21">ความรู้พื้นฐานด้านซอฟต์แวร์</li>
+                    <li class="lisb21">พื้นฐานการตัดคลิป Premiere Pro</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
