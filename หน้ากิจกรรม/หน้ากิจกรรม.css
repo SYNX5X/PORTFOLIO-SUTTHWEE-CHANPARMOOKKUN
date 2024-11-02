@@ -20,56 +20,72 @@ li {
     margin: 0 auto;
   }
 
-  /* สไตล์สำหรับเมนูนำทาง */
   .navbar {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background-color: #333;
+    border-radius: 10px;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 20px;
+}
 
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* สไตล์ลิงค์ใน Navigation Bar */
+.navbar a {
+    position: relative;
+    display: block;
+    color: white;
     text-align: center;
-  }
-
-  .nav-list li {
-    display: inline;
-    margin-right: 10px;
-  }
-
-  .nav-list li a {
+    padding: 15px 10px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1rem;
-  }
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+}
 
-  .nav-list li a:hover {
-    color: #fa4616;
-  }
+/* เมื่อวางเมาส์บนเมนู */
+.navbar a:hover {
+    color: #AC3520;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
+/* คอนเทนเนอร์สำหรับเมนูย่อย */
+.submenu-container {
+    position: relative;
+}
 
-  a {
+/* แถบเมนูเพิ่มเติม */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #444;
+    padding: 0;
+    z-index: 1;
+    width: auto;
+    border-radius: 10px;
+    /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+}
+
+.submenu a {
+    padding: 14px 20px;
+    text-align: left;
+    color: white;
     text-decoration: none;
-    color: #7b8189;
-    font-weight: bold;
-  }
+    display: block;
+    transition: all 0.5s ease;
+}
 
-  a:hover {
-    color: #fa4616;
-  }
+.submenu a:hover {
+    color: #AC3520;
+}
+
+/* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+.submenu-container:hover .submenu {
+    display: flex;
+}
   /* กล่องแสดงภาพ */
   .box1 {
     border: 1px solid #ddd;
@@ -397,7 +413,16 @@ li {
     font-weight: bold;
     color: #fa4616;
   }
-
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #AC3520;
+}
 }
 
 
@@ -414,64 +439,70 @@ li {
     width: 100%;
   }
 
-  /* สไตล์สำหรับเมนูนำทาง */
-  .navbar {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+/* สไตล์ Navigation Bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin: 20px;
+}
 
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+/* สไตล์ลิงค์ใน Navigation Bar */
+.navbar a {
+  position: relative;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
 
-  .nav-list li {
-    display: inline;
-    margin-right: 10px;
-  }
+/* เมื่อวางเมาส์บนเมนู */
+.navbar a:hover {
+  color: #AC3520;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
 
-  .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 2rem;
-    margin: 40px;
-  }
+/* คอนเทนเนอร์สำหรับเมนูย่อย */
+.submenu-container {
+  position: relative;
+}
 
-  .nav-list li a:hover {
-    color: #fa4616;
-  }
+/* แถบเมนูเพิ่มเติม */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  background-color: #444;
+  padding: 0;
+  z-index: 1;
+  width: auto;
+  border-radius: 10px;
+  /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+}
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
+.submenu a {
+  padding: 14px 20px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s ease;
+}
 
-  a {
-    text-decoration: none;
-    color: #7b8189;
-    font-weight: bold;
-  }
+.submenu a:hover {
+  color: #AC3520;
+}
 
-  a:hover {
-    color: #fa4616;
-  }
-
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
+/* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+.submenu-container:hover .submenu {
+  display: flex;
+}
 
   /* กล่องแสดงภาพ */
   .box1 {
@@ -811,6 +842,16 @@ li {
     font-weight: bold;
     color: #fa4616;
   }
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #AC3520;
+}
 }
 
 
@@ -1087,63 +1128,71 @@ li {
   }
 
   /* สไตล์สำหรับเมนูนำทาง */
-  .navbar {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+        /* สไตล์ Navigation Bar */
+        .navbar {
+          display: flex;
+          background-color: #333;
+          border-radius: 10px;
+          margin-top: 20px;
+          flex-direction: column;
+      }
 
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+      /* สไตล์ลิงค์ใน Navigation Bar */
+      .navbar a {
+          position: relative;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 8px 10px;
+          text-decoration: none;
+          transition: all 0.5s ease;
+          font-size: 0.9rem;
+      }
 
-  .nav-list li {
-    display: inline;
-    margin-right: 10px;
-  }
+      /* เมื่อวางเมาส์บนเมนู */
+      .navbar a:hover {
+          color: #AC3520;
+          background-color: #f1f1f1;
+          border-radius: 10px;
+      }
 
-  .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1rem;
-  }
+      /* คอนเทนเนอร์สำหรับเมนูย่อย */
+      .submenu-container {
+          position: relative;
+      }
 
-  .nav-list li a:hover {
-    color: #fa4616;
-  }
+      /* แถบเมนูเพิ่มเติม */
+      .submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          flex-direction: column;
+          background-color: #444;
+          padding: 0;
+          z-index: 1;
+          width: auto;
+          border-radius: 10px;
+          /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+      }
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
+      .submenu a {
+          padding: 14px 20px;
+          text-align: left;
+          color: white;
+          text-decoration: none;
+          display: block;
+          transition: all 0.5s ease;
+      }
 
-  a {
-    text-decoration: none;
-    color: #7b8189;
-    font-weight: bold;
-  }
+      .submenu a:hover {
+          color: #AC3520;
+      }
 
-  a:hover {
-    color: #fa4616;
-  }
-
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
-
+      /* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+      .submenu-container:hover .submenu {
+          display: flex;
+      }
   /* กล่องแสดงภาพ */
   .box1 {
     border: 1px solid #ddd;
@@ -1471,7 +1520,16 @@ li {
     font-weight: bold;
     color: #fa4616;
   }
-
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    width: auto;
+margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #AC3520;
+}
 
 }
 
@@ -1488,57 +1546,69 @@ li {
     width: 100%;
   }
 
-  /* สไตล์สำหรับเมนูนำทาง */
-  .navbar {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+         /* สไตล์ Navigation Bar */
+         .navbar {
+          display: flex;
+          background-color: #333;
+          border-radius: 10px;
+          margin-top: 20px;
+      }
 
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+      /* สไตล์ลิงค์ใน Navigation Bar */
+      .navbar a {
+          position: relative;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          transition: all 0.5s ease;
+      }
 
-  .nav-list li {
-    display: inline;
-    margin-right: 10px;
-  }
+      /* เมื่อวางเมาส์บนเมนู */
+      .navbar a:hover {
+          color: #AC3520;
+          background-color: #f1f1f1;
+          border-radius: 10px;
+      }
 
-  .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 2rem;
-    margin: 40px;
-  }
+      /* คอนเทนเนอร์สำหรับเมนูย่อย */
+      .submenu-container {
+          position: relative;
+      }
 
-  .nav-list li a:hover {
-    color: #fa4616;
-  }
+      /* แถบเมนูเพิ่มเติม */
+      .submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          flex-direction: column;
+          background-color: #444;
+          padding: 0;
+          z-index: 1;
+          width: auto;
+          border-radius: 10px;
+          /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+      }
 
-  hr {
-    border: none;
-    height: 1px;
-    background-color: #ddd;
-    margin: 20px 0;
-  }
+      .submenu a {
+          padding: 14px 20px;
+          text-align: left;
+          color: white;
+          text-decoration: none;
+          display: block;
+          transition: all 0.5s ease;
+      }
 
-  a {
-    text-decoration: none;
-    color: #7b8189;
-    font-weight: bold;
-  }
+      .submenu a:hover {
+          color: #AC3520;
+      }
 
-  a:hover {
-    color: #fa4616;
-  }
+      /* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+      .submenu-container:hover .submenu {
+          display: flex;
+      }
 
   /* กล่องแสดงภาพ */
   .box1 {
@@ -1878,6 +1948,16 @@ li {
     font-weight: bold;
     color: #fa4616;
   }
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #AC3520;
+}
 }
 
 /*หน้าจอทรศเล็กมาก*/
