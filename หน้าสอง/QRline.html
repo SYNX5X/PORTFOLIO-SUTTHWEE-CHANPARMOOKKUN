@@ -6,70 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* จัดรูปแบบลิงก์ */
-        li {
-            display: inline;
-            padding: 10px;
-        }
+* {
+  box-sizing: border-box;
+}
 
-        /* สไตล์สำหรับเมนูนำทาง */
-        .navbar {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-        }
+  .container {
+    
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    align-items: flex-start;
+  }
 
-        .nav-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+  max-width: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
 
-        .nav-list li {
-            display: inline;
-            margin-right: 10px;
-        }
+/* สไตล์ Navigation Bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 
-        .nav-list li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1rem;
-        }
+/* สไตล์ลิงค์ใน Navigation Bar */
+.navbar a {
+  position: relative;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
 
-        .nav-list li a:hover {
-            color: #FA4616;
-        }
+/* เมื่อวางเมาส์บนเมนู */
+.navbar a:hover {
+  color: #AC3520;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
 
-        a {
-            text-decoration: none;
-            color: #000000;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
+/* คอนเทนเนอร์สำหรับเมนูย่อย */
+.submenu-container {
+  position: relative;
+}
 
-        a:hover {
-            color: #FA4616;
-        }
+/* แถบเมนูเพิ่มเติม */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  background-color: #444;
+  padding: 0;
+  z-index: 1;
+  width: auto;
+  border-radius: 10px;
+  /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+}
+
+.submenu a {
+  padding: 14px 20px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.submenu a:hover {
+  color: #AC3520;
+}
+
+/* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+.submenu-container:hover .submenu {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* เปลี่ยนทิศทางเป็นแนวตั้ง */
+    align-items: center;
+    
+  }
+  .navbar{
+    flex-direction: column;
+  }
+  
+  .box-left, .box-right {
+    width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
+    margin: 10px auto; 
+  }
+  .footer{
+    max-width: fit-content;
+    
+  }
+}
+/* สำหรับหน้าจอ iPad Pro แนวตั้ง */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .box-left {
+    width: 80%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
+  }
+
+  .box-right {
+    width: 65%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
+  }
+}
+
     </style>
 </head>
 
 <body>
-    <!-- เมนูนำทาง -->
-    <center>
-        <li><a href="javascript:void(0);" onclick="goBack()">Back</a></li>
-        </ul>
-        </nav>
-    </center>
-    <hr>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <div class="navbar">
+        <a href="/index.html">หน้าเเรก</a>
+        <div class="submenu-container">
+            <a href="#">กิจกรรมที่เข้าร่วม</a>
+            <div class="submenu">
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม(1)</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม(2)</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม(3)</a>
+            </div>
+        </div>
+        <div class="submenu-container">
+            <a href="#">ผลงาน</a>
+            <div class="submenu">
+                <a href="/ผลงาน/ผลงาน.html">ผลงาน</a>
+            </div>
+        </div>
+        <a href="/หน้าสอง/ช่องทางการติดต่อ.html">ช่องทางการติดต่อ</a>
+    </div>
     <center><img src="QR/att.BhRACis7HJfWiHiGoN8gTBeRM6adG22w6d7EAVjm5Q4.jpg" alt="" height="100%" width="100%">
         <h1>Line ID : snyx99</h1>
     </center>

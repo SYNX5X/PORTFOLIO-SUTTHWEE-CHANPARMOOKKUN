@@ -84,59 +84,25 @@ body {
 .submenu-container:hover .submenu {
   display: flex;
 }
-
-
-.box-left {
-  float: left; /* ลอยกล่องไปทางซ้าย */
-  width: 60%; /* กำหนดความกว้างให้กล่องซ้าย */
-  background-color: #ffffff; /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
-  padding: 10px; /* ระยะห่างภายใน */
-  margin: 5px; /* ระยะห่างภายนอก */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin: 20px;
-  
-  img{
-    border-radius: 20px;
-  }
-}
-
-.box-right {
-  float: right; /* ลอยกล่องไปทางขวา */
-  width: 35%; /* กำหนดความกว้างให้กล่องขวา */
-  background-color: #ffffff; /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
-  padding: 10px; /* ระยะห่างภายใน */
-  margin: 5px; /* ระยะห่างภายนอก */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-
-  border-radius: 20px;
-  p{
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #AC3520;
-    padding: 10px;
-  }
-  .pr2{
-       text-align: center;
-  }
-
-}
-.footer {
-  padding: 20px;
-  display: flex;
+.ulli{
+   background-color: #ffffff;
   align-items: center;
-  max-width: max-content;
-  text-align: center;
-  background: #ffffff;
-  width: 100%;
-  margin-top: 20px;
-  margin: 20px;
   border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  color: #AC3520;
-  bottom: 0;
-  font-size: 1.5rem;
+  margin-top: 30px;
+  line-height: 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+  }
+  a:hover{
+    color: #AC3520;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
 }
 @media (max-width: 768px) {
   .container {
@@ -147,15 +113,33 @@ body {
   .navbar{
     flex-direction: column;
   }
-  
-  .box-left, .box-right {
-    width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
-    margin: 10px auto; 
-  }
-  .footer{
-    max-width: fit-content;
-    
-  }
+  .ulli{
+    background-color: #ffffff;
+   align-items: center;
+
+   line-height: 3;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   a{
+     text-decoration: none;
+     color: #000;
+     font-size: 1.3rem;
+   }
+   a:hover{
+     color: #AC3520;
+     text-decoration: underline;
+     font-weight: bold;
+     font-size: 1.5rem;
+   }
+  }}
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #AC3520;
 }
 /* สำหรับหน้าจอ iPad Pro แนวตั้ง */
 @media (min-width: 768px) and (max-width: 1366px) {
@@ -164,14 +148,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
   }
-
-  .box-left {
-    width: 80%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
+  .ulli{
+    background-color: #ffffff;
+   align-items: center;
+   line-height: 3;
+   padding: 70px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   a{
+     text-decoration: none;
+     color: #000;
+     font-size: 1.3rem;
+   }
+   a:hover{
+     color: #AC3520;
+     text-decoration: underline;
+     font-weight: bold;
+     font-size: 1.5rem;
+   }
+  }}
+  .footer{
+    
+    
   }
-
-  .box-right {
-    width: 65%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
-  }
-}
 
