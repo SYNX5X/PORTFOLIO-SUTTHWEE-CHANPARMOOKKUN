@@ -2,20 +2,19 @@
   box-sizing: border-box;
 }
 
-  .container {
-    
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-    align-items: flex-start;
-  }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  align-items: flex-start;
+}
 
 body {
   font-family: Arial;
   padding: 10px;
   background: #f1f1f1;
   max-width: auto;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 /* สไตล์ Navigation Bar */
@@ -39,7 +38,7 @@ body {
 
 /* เมื่อวางเมาส์บนเมนู */
 .navbar a:hover {
-  color: #AC3520;
+  color: #fa4616;
   background-color: #f1f1f1;
   border-radius: 10px;
   font-weight: bold;
@@ -76,7 +75,7 @@ body {
 }
 
 .submenu a:hover {
-  color: #AC3520;
+  color: #fa4616;
   width: 300px;
 }
 
@@ -85,78 +84,94 @@ body {
   display: flex;
 }
 
-
 .box-left {
-  float: left; /* ลอยกล่องไปทางซ้าย */
-  width: 60%; /* กำหนดความกว้างให้กล่องซ้าย */
-  background-color: #ffffff; /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
-  padding: 10px; /* ระยะห่างภายใน */
-  margin: 5px; /* ระยะห่างภายนอก */
+  float: left;
+  /* ลอยกล่องไปทางซ้าย */
+  width: 60%;
+  /* กำหนดความกว้างให้กล่องซ้าย */
+  background-color: #ffffff;
+  /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
+  padding: 10px;
+  /* ระยะห่างภายใน */
+  margin: 5px;
+  /* ระยะห่างภายนอก */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin: 20px;
-  
-  img{
+
+  img {
     border-radius: 20px;
   }
 }
 
 .box-right {
-  float: right; /* ลอยกล่องไปทางขวา */
-  width: 35%; /* กำหนดความกว้างให้กล่องขวา */
-  background-color: #ffffff; /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
-  padding: 10px; /* ระยะห่างภายใน */
-  margin: 5px; /* ระยะห่างภายนอก */
+  float: right;
+  /* ลอยกล่องไปทางขวา */
+  width: 35%;
+  /* กำหนดความกว้างให้กล่องขวา */
+  background-color: #ffffff;
+  /* สีพื้นหลังของกล่อง (ปรับแต่งได้) */
+  padding: 10px;
+  /* ระยะห่างภายใน */
+  margin: 5px;
+  /* ระยะห่างภายนอก */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
 
   border-radius: 20px;
-  p{
+
+  p {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: #AC3520;
+    color: #336699;
     padding: 10px;
-  }
-  .pr2{
-       text-align: center;
+    line-height: 1.6;
   }
 
+  .pr2 {
+    text-align: center;
+  }
 }
+
 .footer {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: max-content;
+  justify-content: center;
   text-align: center;
   background: #ffffff;
   width: 100%;
-  margin-top: 20px;
-  margin: 20px;
+  max-width: auto;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  color: #AC3520;
+  color: #336699;
   bottom: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* เปลี่ยนทิศทางเป็นแนวตั้ง */
+    flex-direction: column;
+    /* เปลี่ยนทิศทางเป็นแนวตั้ง */
     align-items: center;
-    
   }
-  .navbar{
+
+  .navbar {
     flex-direction: column;
   }
-  
-  .box-left, .box-right {
-    width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
-    margin: 10px auto; 
+
+  .box-left,
+  .box-right {
+    width: 100%;
+    /* ใช้ความกว้างเต็มในแนวตั้ง */
+    margin: 10px auto;
   }
-  .footer{
+
+  .footer {
     max-width: fit-content;
-    
   }
 }
+
 /* สำหรับหน้าจอ iPad Pro แนวตั้ง */
 @media (min-width: 768px) and (max-width: 1366px) {
   .container {
@@ -167,10 +182,10 @@ body {
   }
 
   .box-left {
-    width: 80%; 
+    width: 80%;
   }
 
   .box-right {
-    width: 65%; 
+    width: 65%;
   }
 }

@@ -1,156 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-* {
-  box-sizing: border-box;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-  .container {
-    
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-    align-items: flex-start;
-  }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+        align-items: flex-start;
+      }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
-  max-width: auto;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
+      body {
+        font-family: Arial;
+        padding: 10px;
+        background: #f1f1f1;
+        max-width: auto;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
 
-/* สไตล์ Navigation Bar */
-.navbar {
-  display: flex;
-  background-color: #333;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+      /* สไตล์ Navigation Bar */
+      .navbar {
+        display: flex;
+        background-color: #333;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
 
-/* สไตล์ลิงค์ใน Navigation Bar */
-.navbar a {
-  position: relative;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
+      /* สไตล์ลิงค์ใน Navigation Bar */
+      .navbar a {
+        position: relative;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: all 0.5s ease;
+      }
 
-/* เมื่อวางเมาส์บนเมนู */
-.navbar a:hover {
-  color: #AC3520;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-}
+      /* เมื่อวางเมาส์บนเมนู */
+      .navbar a:hover {
+        color: #336699;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
 
-/* คอนเทนเนอร์สำหรับเมนูย่อย */
-.submenu-container {
-  position: relative;
-}
+      /* คอนเทนเนอร์สำหรับเมนูย่อย */
+      .submenu-container {
+        position: relative;
+      }
 
-/* แถบเมนูเพิ่มเติม */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  flex-direction: column;
-  background-color: #444;
-  padding: 0;
-  z-index: 1;
-  width: auto;
-  border-radius: 10px;
-  /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
-}
+      /* แถบเมนูเพิ่มเติม */
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: #444;
+        padding: 0;
+        z-index: 1;
+        width: auto;
+        border-radius: 10px;
+        /* ปรับความกว้างให้เท่ากับความกว้างของเมนูย่อย */
+      }
 
-.submenu a {
-  padding: 14px 20px;
-  text-align: left;
-  color: white;
-  text-decoration: none;
-  display: block;
-  transition: all 0.5s ease;
-}
+      .submenu a {
+        padding: 14px 20px;
+        text-align: left;
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: all 0.5s ease;
+      }
 
-.submenu a:hover {
-  color: #AC3520;
-}
+      .submenu a:hover {
+        color: #336699;
+        width: 300px;
+      }
 
-/* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
-.submenu-container:hover .submenu {
-  display: flex;
-}
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* เปลี่ยนทิศทางเป็นแนวตั้ง */
-    align-items: center;
-    
-  }
-  .navbar{
-    flex-direction: column;
-  }
-  
-  .box-left, .box-right {
-    width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
-    margin: 10px auto; 
-  }
-  .footer{
-    max-width: fit-content;
-    
-  }
-}
-/* สำหรับหน้าจอ iPad Pro แนวตั้ง */
-@media (min-width: 768px) and (max-width: 1366px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
+      /* เมื่อวางเมาส์บนเมนูหลักและแสดงแถบเมนูเพิ่มเติม */
+      .submenu-container:hover .submenu {
+        display: flex;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* เปลี่ยนทิศทางเป็นแนวตั้ง */
+          align-items: center;
+        }
+        .navbar {
+          flex-direction: column;
+        }
 
-  .box-left {
-    width: 80%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
-  }
-
-  .box-right {
-    width: 65%; /* ปรับขนาดกล่องสำหรับ iPad Pro */
-  }
-}
-
+        .box-left,
+        .box-right {
+          width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
+          margin: 10px auto;
+        }
+        .footer {
+          max-width: fit-content;
+        }
+      }
+      /* สำหรับหน้าจอ iPad Pro แนวตั้ง */
+      @media (min-width: 768px) and (max-width: 1366px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="navbar">
-        <a href="/index.html">หน้าเเรก</a>
-        <div class="submenu-container">
-            <a href="#">กิจกรรมที่เข้าร่วม</a>
-            <div class="submenu">
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม(1)</a>
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม(2)</a>
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม(3)</a>
-            </div>
+      <a href="/index.html">หน้าเเรก</a>
+      <div class="submenu-container">
+        <a href="#">กิจกรรมที่เข้าร่วม</a>
+        <div class="submenu">
+          <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม(1)</a>
+          <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม(2)</a>
+          <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม(3)</a>
         </div>
-        <div class="submenu-container">
-            <a href="#">ผลงาน</a>
-            <div class="submenu">
-                <a href="/ผลงาน/ผลงาน.html">ผลงาน</a>
-            </div>
+      </div>
+      <div class="submenu-container">
+        <a href="#">ผลงาน</a>
+        <div class="submenu">
+          <a href="/ผลงาน/ผลงาน.html">ผลงาน</a>
         </div>
-        <a href="/หน้าสอง/ช่องทางการติดต่อ.html">ช่องทางการติดต่อ</a>
+      </div>
+      <a href="/หน้าสอง/ช่องทางการติดต่อ.html">ช่องทางการติดต่อ</a>
     </div>
-    <center><img src="QR/att.BhRACis7HJfWiHiGoN8gTBeRM6adG22w6d7EAVjm5Q4.jpg" alt="" height="100%" width="100%">
-        <h1>Line ID : snyx99</h1>
+    <center>
+      <img
+        src="QR/att.BhRACis7HJfWiHiGoN8gTBeRM6adG22w6d7EAVjm5Q4.jpg"
+        alt=""
+        height="100%"
+        width="100%"
+      />
+      <h1>Line ID : snyx99</h1>
     </center>
-</body>
-
+  </body>
 </html>
