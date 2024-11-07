@@ -102,6 +102,10 @@ body {
   img {
     border-radius: 20px;
   }
+  img::selection{
+    color: #fa4616;
+    background-color: #ddd;
+  }
 }
 
 .box-right {
@@ -131,6 +135,10 @@ body {
   .pr2 {
     text-align: center;
   }
+  p::selection{
+    color: #fa4616;
+    background-color: #ddd;
+  }
 }
 
 .footer {
@@ -147,6 +155,10 @@ body {
   color: #336699;
   bottom: 0;
   font-size: 1.2rem;
+  h2::selection{
+    color: #fa4616;
+    background-color: #ddd;
+  }
 }
 
 @media (max-width: 768px) {

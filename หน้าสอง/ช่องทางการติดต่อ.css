@@ -92,11 +92,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   a {
     text-decoration: none;
-    color: #000;
+    color: #336699;
     font-size: 1.3rem;
   }
+  a::selection{
+    color: #fa4616;
+    background-color: #ddd;
+  }
   a:hover {
-    color: #336699;
+    color: #fa4616;
     text-decoration: underline;
     font-weight: bold;
     font-size: 1.5rem;
@@ -122,7 +126,7 @@ body {
       font-size: 1.3rem;
     }
     a:hover {
-      color: #336699;
+      color: #fa4616;
       text-decoration: underline;
       font-weight: bold;
       font-size: 1.5rem;
@@ -143,7 +147,10 @@ body {
   color: #336699;
   bottom: 0;
   font-size: 1.2rem;
-  
+  h3::selection{
+    color: #fa4616;
+    background-color: #ddd;
+  }
 }
 /* สำหรับหน้าจอ iPad Pro แนวตั้ง */
 @media (min-width: 768px) and (max-width: 1366px) {

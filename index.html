@@ -29,6 +29,14 @@
             text-align: center;
             background: white;
             border-radius: 10px;
+            h1::selection{
+                  background-color: #ddd;
+                  color: #fa4616;
+            }
+            p::selection{
+                background-color: #ddd;
+                color: #fa4616;
+            }
         }
 
         .header h1 {
@@ -55,6 +63,7 @@
             background-color: #333;
             border-radius: 10px;
             margin-top: 20px;
+   
         }
 
         /* สไตล์ลิงค์ใน Navigation Bar */
@@ -167,18 +176,21 @@
             img {
                 border-radius: 15px;
             }
-
-            .ulsb2 {
-                text-align: center;
+            .psb1::selection {
+                color: #fa4616;
+                background-color: #ddd;
             }
 
-            .lisb2 {
-                margin-top: 10px;
+            h3::selection {
+                color: #fa4616;
+                background-color: #ddd;
             }
-
-            .lisb21 {
-                line-height: 1.5;
-                color: #336699;
+            h2::selection{
+                color: #fa4616;
+                background-color: #ddd;
+            }
+            img::selection{
+                background-color: #ddd;
             }
         }
 
@@ -209,13 +221,24 @@
                 font-size: 1.2rem;
             }
 
-            h3 {
-                text-align: center;
-                font-size: 1.4rem;
+            h2::selection {
+                color: #fa4616;
+                background-color: #ddd;
             }
 
-            img {
-                border-radius: 15px;
+            img::selection {
+                background-color: #ddd;
+            }
+            .lisb21::selection {
+                color: #fa4616;
+                background-color: #ddd;
+            }
+
+            .psb1 {
+                color: #336699;
+                text-align: center;
+                line-height: 1.5;
+                font-size: 1.2rem;
             }
         }
 
@@ -250,6 +273,23 @@
             h2 {
                 font-size: 1.4rem;
             }
+            .ptb1::selection {
+                background-color: #ddd;
+                color: #fa4616;
+            }
+
+            h4::selection {
+                background-color: #ddd;
+                color: #fa4616;
+                
+            }
+
+            h2::selection {
+                background-color: #ddd;
+                color: #fa4616;
+                
+            }
+
         }
 
         .title-box2 {
@@ -274,6 +314,22 @@
             h2 {
                 font-size: 1.6rem;
             }
+            .ptb2::selection {
+                background-color: #ddd;
+                color: #fa4616;
+            }
+
+            h4::selection {
+                background-color: #ddd;
+                color: #fa4616;
+                
+            }
+
+            h2::selection {
+                background-color: #ddd;
+                color: #fa4616;
+                
+            }
         }
 
         .footer {
@@ -286,6 +342,10 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             color: #336699;
             font-size: 1.2rem;
+            h3::selection{
+                background-color: #ddd;
+                color: #fa4616;
+            }
         }
 
         /* Responsive Styling */
@@ -354,9 +414,9 @@
         <div class="submenu-container">
             <a href="#">กิจกรรมที่เข้าร่วม</a>
             <div class="submenu">
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม(1)</a>
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม(2)</a>
-                <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม(3)</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม.html">กิจกรรมที่เข้าร่วม{1}</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม2.html">กิจกรรมที่เข้าร่วม{2}</a>
+                <a href="/หน้ากิจกรรม/หน้ากิจกรรม3.html">กิจกรรมที่เข้าร่วม{3}</a>
             </div>
         </div>
         <div class="submenu-container">
