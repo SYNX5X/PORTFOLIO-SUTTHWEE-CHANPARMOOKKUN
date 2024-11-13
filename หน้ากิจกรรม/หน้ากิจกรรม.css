@@ -160,12 +160,16 @@ body {
   .box-right {
     width: 100%; /* ใช้ความกว้างเต็มในแนวตั้ง */
     margin: 10px auto;
+    p{
+      font-size: 1.2rem;
+    }
   }
   .footer {
     max-width: fit-content;
   }
+
 }
-/* สำหรับหน้าจอ iPad Pro แนวตั้ง */
+
 @media (min-width: 768px) and (max-width: 1366px) {
   .container {
     display: flex;

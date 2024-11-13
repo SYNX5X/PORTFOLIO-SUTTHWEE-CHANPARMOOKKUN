@@ -177,6 +177,9 @@ body {
     width: 100%;
     /* ใช้ความกว้างเต็มในแนวตั้ง */
     margin: 10px auto;
+    p{
+      font-size: 1.2rem;
+    }
   }
 
   .footer {
